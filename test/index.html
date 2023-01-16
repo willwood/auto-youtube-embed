@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <script src="../src/js/script.js" defer></script>
+    <title>Auto YouTube Embed</title>
+  </head>
+  <body>
+    <main>
+      <h1>Auto YouTube Embed</h1>
+      <p>
+        The Auto YouTube Embed uses Javascript to take a video ID, URL or embed
+        code, from an HTML
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes"
+          target="_blank"
+          >data&nbsp;attribute</a
+        >. It extracts the video ID and automatically converts it into a
+        mobile-optimised (responsive) embedded YouTube video.
+      </p>
+      <hr />
+      <h3>Video ID example:</h3>
+      <div data-yt-embed="6axSB3T4vbk"></div>
+      <pre><code>&lt;div data-yt-embed="6axSB3T4vbk">&lt;/div></code></pre>
+      <hr />
+      <h3>Video URL example:</h3>
+      <div data-yt-embed="https://www.youtube.com/watch?v=6axSB3T4vbk"></div>
+      <pre><code>&lt;div data-yt-embed="https://www.youtube.com/watch?v=6axSB3T4vbk">&lt;/div></code></pre>
+      <hr />
+      <h3>Shortened URL example:</h3>
+      <div data-yt-embed="https://youtu.be/6axSB3T4vbk"></div>
+      <pre><code>&lt;div data-yt-embed="https://youtu.be/6axSB3T4vbk">&lt;/div></code></pre>
+      <hr />
+      <h3>No-Cookie example:</h3>
+      <div
+        data-yt-embed="https://www.youtube-nocookie.com/embed/6axSB3T4vbk"
+      ></div>
+      <pre><code>&lt;div data-yt-embed="https://www.youtube-nocookie.com/embed/6axSB3T4vbk">&lt;/div></code></pre>
+      <hr />
+      <h3>YouTube Embed Code example:</h3>
+      <div
+        data-yt-embed='<iframe src="https://www.youtube.com/embed/6axSB3T4vbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+      ></div>
+      <pre><code>&lt;div data-yt-embed='&lt;iframe src="https://www.youtube.com/embed/6axSB3T4vbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>&lt;/iframe>'>&lt;/div></code></pre>
+      <p>
+        If the possibility exists of YouTube embed code getting used, like in
+        this example, enclosing the <code>data-yt-embed</code> attribute value
+        inside single quote marks ( ' &amp; ' ) resolves HTML validation issues
+        and correctly parses the markup.
+      </p>
+      <hr />
+      <h3>YouTube Shorts example:</h3>
+      <div data-yt-embed="https://youtu.be/PA3S88aa4ZU" class="yt_short"></div>
+      <pre><code>&lt;div data-yt-embed="https://youtu.be/PA3S88aa4ZU" class="yt_short">&lt;/div></code></pre>
+      <p>
+        Add a class of <code>yt_short</code> to the
+        <code>&lt;div></code> container, to force a 9/16 aspect ratio.
+      </p>
+    </main>
+  </body>
+</html>
